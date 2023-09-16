@@ -1,7 +1,8 @@
-package com.example.tdd_start;
+package com.example.tdd_start.chapter2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.tdd_start.chapter2.Calculator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

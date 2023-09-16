@@ -1,11 +1,13 @@
-package com.example.tdd_start;
+package com.example.tdd_start.chapter2;
 
-import static com.example.tdd_start.PasswordStrength.INVALID;
-import static com.example.tdd_start.PasswordStrength.NORMAL;
-import static com.example.tdd_start.PasswordStrength.STRONG;
-import static com.example.tdd_start.PasswordStrength.WEAK;
+import static com.example.tdd_start.chapter2.PasswordStrength.INVALID;
+import static com.example.tdd_start.chapter2.PasswordStrength.NORMAL;
+import static com.example.tdd_start.chapter2.PasswordStrength.STRONG;
+import static com.example.tdd_start.chapter2.PasswordStrength.WEAK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.example.tdd_start.chapter2.PasswordStrength;
+import com.example.tdd_start.chapter2.PasswordStrengthMeter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

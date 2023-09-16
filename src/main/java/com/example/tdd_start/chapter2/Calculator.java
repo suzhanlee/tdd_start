@@ -1,4 +1,4 @@
-package com.example.tdd_start;
+package com.example.tdd_start.chapter2;
 
 public class Calculator {
 
