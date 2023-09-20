@@ -10,20 +10,20 @@ import org.junit.jupiter.api.Test;
 class AutoDebitRegisterTest {
 
     private AutoDebitRegister register;
-    private StubCardNumberValidator stubValidator;
+    private StubCardValidator stubValidator;
     private StubAutoDebitInfoRepository stubRepository;
     private MemoryAutoDebitInfoRepository repository;
 
     @BeforeEach
     void setUp() {
-        stubValidator = new StubCardNumberValidator();
+        stubValidator = new StubCardValidator();
 //        stubRepository = new StubAutoDebitInfoRepository();
         repository = new MemoryAutoDebitInfoRepository();
         register = new AutoDebitRegister(stubValidator, repository);
     }
 
     @Test
-    void invalidCard() {
+    void invalidCardNumber() {
         stubValidator.setInvalidNo("123");
 
         AutoDebitReq req = new AutoDebitReq("user1", "123");
@@ -51,4 +51,6 @@ class AutoDebitRegisterTest {
         AutoDebitInfo saved = repository.findOne("user1");
         assertEquals("123", saved.getCarNumber());
     }
+
+
 }

@@ -1,6 +1,6 @@
 package com.example.tdd_start.chapter7;
 
-public class StubCardNumberValidator extends CardNumberValidator {
+public class StubCardValidator extends CardNumberValidator {
 
     private String invalidNo;
 
