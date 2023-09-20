@@ -34,18 +34,4 @@ public class UserRegisterMockOvercaseTest {
         assertEquals("id", savedUser.getId());
         assertEquals("email", savedUser.getEmail());
     }
-
-    @Test
-    void 같은_ID가_없으면_가입() {
-        userRegister.register("id", "pw", "email");
-
-        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
-        BDDMockito.then(mockRepository)
-            .should().save(captor.capture());
-
-        User savedUser = captor.getValue();
-        assertEquals("id", savedUser.getId());
-        assertEquals("email", savedUser.getEmail());
-    }
-
 }
